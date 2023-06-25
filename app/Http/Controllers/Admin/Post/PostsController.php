@@ -8,4 +8,9 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     //
+
+    public function postsView()
+    {
+        return view('auth.authenticated.posts');
+    }
 }

@@ -21,8 +21,8 @@ Route::namespace('Auth')->group(function(){
     Route::get('/completion', 'Register\RegisterController@completionView');
 });
 
-Route::namespace('admin')->group(function(){
-    // Route::get('/post', 'Post\Controller@View');
+Route::namespace('Admin')->group(function(){
+    Route::get('/posts', 'Post\PostsController@postsView');
     // Route::get('/category', 'Post\Controller@View');
     // Route::get('/create', 'Post\Controller@View');
     // Route::get('/detail', 'Post\Controller@View');

@@ -41,9 +41,6 @@
                     <div><!--foreachでカテゴリーを繰り返す-->
                         <div></div><!--メイン-->
                         <div></div><!--サブ-->
-                        <div>
-                            <input type="submit" class="btn btn-primary" value="削除">
-                        </div>
                     </div>
                 </div>
             </div>
