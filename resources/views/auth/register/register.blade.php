@@ -15,9 +15,15 @@
 <body>
   <div>
     <div>
-        <p>ログイン</p>
+        <p>ユーザー登録</p>
     </div>
    <form>
+        <div>
+            <span>ユーザー名</span>
+            <div>
+                <input type="text" name="username">
+            </div>
+        </div>
         <div>
             <span>メールアドレス</span>
             <div>
@@ -31,7 +37,13 @@
             </div>
         </div>
         <div>
-            <input type="submit" class="btn btn-primary" value="ログイン">
+            <span>パスワード</span>
+            <div>
+                <input type="password" name="password"><!--パスワード確認用-->
+            </div>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-primary" value="確認">
         </div>
     {{ csrf_field() }}
    </form>
