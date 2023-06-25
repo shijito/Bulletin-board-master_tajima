@@ -20,3 +20,12 @@ Route::namespace('Auth')->group(function(){
     Route::get('/register', 'Register\RegisterController@registerView');
     Route::get('/completion', 'Register\RegisterController@completionView');
 });
+
+Route::namespace('admin')->group(function(){
+    // Route::get('/post', 'Post\Controller@View');
+    // Route::get('/category', 'Post\Controller@View');
+    // Route::get('/create', 'Post\Controller@View');
+    // Route::get('/detail', 'Post\Controller@View');
+    // Route::get('/update', 'Post\Controller@View');
+    // Route::get('/comment', 'Post\Controller@View');
+});
