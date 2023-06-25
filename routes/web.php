@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', 'App\Http\Controllers\Auth\Login\LoginController@loginView');
+Route::namespace('Auth')->group(function(){
+    Route::get('/login', 'Login\LoginController@loginView');
+    Route::get('/register', 'Register\RegisterController@registerView');
+    Route::get('/completion', 'Register\RegisterController@completionView');
+});
