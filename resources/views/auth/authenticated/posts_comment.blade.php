@@ -13,6 +13,7 @@
             </div>
             <div>
                 <!--テキストエリア-->
+                <input type="text">
             </div>
         </div>
         <div>

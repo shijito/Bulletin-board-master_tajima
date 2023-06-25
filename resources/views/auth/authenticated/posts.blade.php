@@ -26,6 +26,7 @@
                 <div><!--検索-->
                         <div>
                             <!--テキストエリア-->
+                            <input type="text">
                         </div>
                         <div>
                             <input type="submit" class="btn btn-primary" value="検索">

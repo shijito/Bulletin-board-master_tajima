@@ -13,6 +13,7 @@
             </div>
             <div>
                 <!--テキストエリア-->
+                <input type="text">
                 <input type="submit" class="btn btn-primary" value="登録">
             </div>
         </div>
@@ -31,6 +32,7 @@
                 </div>
                 <div>
                     <!--テキストエリア-->
+                    <input type="text">
                     <input type="submit" class="btn btn-primary" value="登録">
                 </div>
             </div>
