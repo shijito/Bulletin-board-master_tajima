@@ -17,11 +17,11 @@
     <div>
         <p>ログイン</p>
     </div>
-   <form>
+    <form action="{{ route('loginPost') }}" method="POST">
         <div>
             <span>メールアドレス</span>
             <div>
-                <input type="text" name="mail_address">
+                <input type="text" name="email">
             </div>
         </div>
         <div>
@@ -34,7 +34,10 @@
             <input type="submit" class="btn btn-primary" value="ログイン">
         </div>
     {{ csrf_field() }}
-   </form>
+    </form>
+    <div>
+        <p>新規ユーザーの登録は<a href="{{route('registerView')}}">こちら</a></p>
+    </div>
   </div>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
   <!-- <script src="{{ asset('js/register.js') }}" rel="stylesheet"></script> -->
