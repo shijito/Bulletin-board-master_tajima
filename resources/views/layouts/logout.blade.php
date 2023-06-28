@@ -16,6 +16,7 @@
   <div>
     <div class="logout">
     @section('logout')
+    <div></div><!--各ページ名-->
     <div>
         <input type="submit" class="btn btn-primary" value="ログアウト">
     </div>
