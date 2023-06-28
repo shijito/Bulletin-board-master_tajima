@@ -17,7 +17,7 @@
     <div>
         <p>ユーザー登録</p>
     </div>
-   <form>
+    <form action="{{ route('registerPost') }}" method="POST">
         <div>
             <span>ユーザー名</span>
             <div>
@@ -27,7 +27,7 @@
         <div>
             <span>メールアドレス</span>
             <div>
-                <input type="text" name="mail_address">
+                <input type="text" name="email">
             </div>
         </div>
         <div>
@@ -37,16 +37,16 @@
             </div>
         </div>
         <div>
-            <span>パスワード</span>
+            <span>確認用パスワード</span>
             <div>
-                <input type="password" name="password"><!--パスワード確認用-->
+                <input type="password" name="password_confirmation"><!--パスワード確認用-->
             </div>
         </div>
         <div>
             <input type="submit" class="btn btn-primary" value="確認">
         </div>
     {{ csrf_field() }}
-   </form>
+    </form>
   </div>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
   <!-- <script src="{{ asset('js/register.js') }}" rel="stylesheet"></script> -->

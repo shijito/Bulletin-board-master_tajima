@@ -18,7 +18,7 @@
         <p>登録ありがとうございます</p>
     </div>
     <div>
-        <input type="submit" class="btn btn-primary" value="ログイン画面へ">
+        <button type="button" class="btn btn-primary" ><a href="{{route('loginView')}}">ログイン画面へ</button>
     </div>
   </div>
   <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
