@@ -18,11 +18,15 @@
         <div><!--右側-->
             <div><!--カテゴリーを追加-->
                 <!--ボタンで新規カテゴリーURL遷移-->
-                <button type="button" class="btn btn-primary" ></button>
+                <button type="button" class="btn btn-primary" >
+                    <a href="{{ route('categoryView') }}">カテゴリーを追加</a>
+                </button>
             </div>
             <div><!--投稿-->
                 <!--ボタンで新規投稿URL遷移-->
-                <button type="button" class="btn btn-primary" ></button>
+                <button type="button" class="btn btn-primary" >
+                    <a href="{{ route('createView') }}">投稿</a>
+                </button>
             </div>
             <div><!--検索系-->
                 <div><!--検索-->

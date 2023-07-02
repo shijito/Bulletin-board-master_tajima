@@ -32,8 +32,8 @@ Route::group(['middleware' => ['auth']], function(){
     Route::namespace('Admin')->group(function(){
         Route::namespace('Post')->group(function(){
             Route::get('/posts', 'PostsController@postsView')->name('postsView');
-            // Route::get('/category', 'Post\Controller@View');
-            // Route::get('/create', 'Post\Controller@View');
+            // Route::get('/posts/category', 'PostsController@categoryView')->name('categoryView');
+            // Route::get('/posts/create', 'PostsController@createView')->name('createView');
             // Route::get('/detail', 'Post\Controller@View');
             // Route::get('/update', 'Post\Controller@View');
             // Route::get('/comment', 'Post\Controller@View');
@@ -41,6 +41,10 @@ Route::group(['middleware' => ['auth']], function(){
         });
     });
 });
+
+Route::get('/posts/category', 'Admin\Post\PostsController@categoryView')->name('categoryView');
+Route::get('/posts/create', 'Admin\Post\PostsController@createView')->name('createView');
+
 
 Route::get('/', function () {
     return redirect('/login');
