@@ -25,9 +25,11 @@
                 <div>
                     <select>
                         <option selected disabled>----</option>
-                        <option value="" name="main_category_id">
-                        <!--メインカテゴリーを表示させる-->
+                        @foreach($post_main_categories as $main_category)
+                        <option value="{{ $main_category->id }}" name="main_category_id">
+                            {{ $main_category->main_category }}
                         </option>
+                        @endforeach
                     </select>
                 </div>
             </div>
@@ -42,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <form action="{{ route('maincategory') }}" method="post" id="mainCategoryRequest">{{ csrf_field() }}
+        <form action="{{ route('maincategory_create') }}" method="post" id="mainCategoryRequest">{{ csrf_field() }}
         </form>
         <form action="/" method="post" id="subCategoryRequest">{{ csrf_field() }}
         </form>

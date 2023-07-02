@@ -44,7 +44,8 @@ Route::group(['middleware' => ['auth']], function(){
 
 //仮ROUTE設定↓
 Route::get('/posts/category', 'Admin\Post\PostsController@categoryView')->name('categoryView');
-Route::post('/maincategory', 'Admin\Post\PostMainCategoriesController@maincategory')->name('maincategory');
+Route::post('/maincategorycreate', 'Admin\Post\PostMainCategoriesController@maincategorycreate')->name('maincategory_create');
+Route::post('/subcategory', 'Admin\Post\PostSubCategoriesController@subcategory')->name('subcategory');
 Route::get('/posts/create', 'Admin\Post\PostsController@createView')->name('posts.createView');
 
 //仮ROUTE設定ここまで
