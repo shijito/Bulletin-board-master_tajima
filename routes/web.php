@@ -42,9 +42,11 @@ Route::group(['middleware' => ['auth']], function(){
     });
 });
 
+//仮ROUTE設定↓
 Route::get('/posts/category', 'Admin\Post\PostsController@categoryView')->name('categoryView');
 Route::get('/posts/create', 'Admin\Post\PostsController@createView')->name('createView');
 
+//仮ROUTE設定ここまで
 
 Route::get('/', function () {
     return redirect('/login');
