@@ -25,7 +25,9 @@
                 <div>
                     <select>
                         <option selected disabled>----</option>
-                        <option></option>
+                        <option value="" name="main_category_id">
+                        <!--メインカテゴリーを表示させる-->
+                        </option>
                     </select>
                 </div>
             </div>
