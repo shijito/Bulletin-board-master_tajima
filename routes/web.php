@@ -33,7 +33,7 @@ Route::group(['middleware' => ['auth']], function(){
         Route::namespace('Post')->group(function(){
             Route::get('/posts', 'PostsController@postsView')->name('postsView');
             // Route::get('/posts/category', 'PostsController@categoryView')->name('categoryView');
-            // Route::get('/posts/create', 'PostsController@createView')->name('createView');
+            // Route::get('/posts/create', 'PostsController@createView')->name('posts.createView');
             // Route::get('/detail', 'Post\Controller@View');
             // Route::get('/update', 'Post\Controller@View');
             // Route::get('/comment', 'Post\Controller@View');
@@ -44,7 +44,8 @@ Route::group(['middleware' => ['auth']], function(){
 
 //仮ROUTE設定↓
 Route::get('/posts/category', 'Admin\Post\PostsController@categoryView')->name('categoryView');
-Route::get('/posts/create', 'Admin\Post\PostsController@createView')->name('createView');
+Route::post('/maincategory', 'Admin\Post\PostMainCategoriesController@maincategory')->name('maincategory');
+Route::get('/posts/create', 'Admin\Post\PostsController@createView')->name('posts.createView');
 
 //仮ROUTE設定ここまで
 

@@ -25,7 +25,7 @@
             <div><!--投稿-->
                 <!--ボタンで新規投稿URL遷移-->
                 <button type="button" class="btn btn-primary" >
-                    <a href="{{ route('createView') }}">投稿</a>
+                    <a href="{{ route('posts.createView') }}">投稿</a>
                 </button>
             </div>
             <div><!--検索系-->

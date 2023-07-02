@@ -7,23 +7,26 @@
         <span>カテゴリー追加画面</span>
     </div>
     <div>
-        <div>
+        <div><!--メインカテゴリー設定-->
             <div>
                 <span>新規メインカテゴリー</span>
             </div>
-            <div>
+            <div class="">
                 <!--テキストエリア-->
-                <input type="text">
-                <input type="submit" class="btn btn-primary" value="登録">
+                <input type="text" name="main_category_name" form="mainCategoryRequest">
+                <input type="submit" class="btn btn-primary" value="登録" form="mainCategoryRequest">
             </div>
         </div>
-        <div>
+        <div><!--サブカテゴリー設定-->
             <div>
                 <div>
                     <span>メインカテゴリー</span>
                 </div>
                 <div>
-                    <!--セレクト-->
+                    <select>
+                        <option selected disabled>----</option>
+                        <option></option>
+                    </select>
                 </div>
             </div>
             <div>
@@ -37,6 +40,10 @@
                 </div>
             </div>
         </div>
+        <form action="{{ route('maincategory') }}" method="post" id="mainCategoryRequest">{{ csrf_field() }}
+        </form>
+        <form action="/" method="post" id="subCategoryRequest">{{ csrf_field() }}
+        </form>
     </div>
     <div>
         <div>
