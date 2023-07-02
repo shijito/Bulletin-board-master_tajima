@@ -12,4 +12,8 @@ class PostSubCategory extends Model
         'post_main_category_id',
         'sub_category',
     ];
+
+    public function mainCategory(){
+        return $this->belongsTo('App\Models\Posts\PostMainCategory');// リレーションの定義、多対単（サブ対メイン）
+    }
 }
