@@ -13,4 +13,9 @@ class PostsController extends Controller
     {
         return view('auth.authenticated.posts');
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/login');
+    }
 }

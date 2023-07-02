@@ -18,7 +18,9 @@
     @section('logout')
     <div></div><!--各ページ名-->
     <div>
-        <input type="submit" class="btn btn-primary" value="ログアウト">
+        <button type="button" class="btn btn-primary">
+          <a href="/logout">ログアウト</a><!--postscontroller-->
+        </button>
     </div>
     </div>  
     <div class="main-container">

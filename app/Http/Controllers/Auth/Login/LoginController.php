@@ -14,12 +14,12 @@ class LoginController extends Controller
 
     public function loginPost(Request $request){
         $userdata = $request -> only('email', 'password');
-        return redirect('/posts');
-        // if (Auth::attempt($userdata)) {
-        //     return redirect('/posts');
-        // }else{
-        //     return redirect('/login');//->with('flash_message', 'name or password is incorrect');
-        // }
+        return view('auth.authenticated.posts');
+        if (Auth::attempt($userdata)) {
+            return redirect('/posts');
+        }else{
+            return redirect('/login');//->with('flash_message', 'name or password is incorrect');
+        }
     }
 
 }
