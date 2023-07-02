@@ -14,20 +14,34 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::namespace('Auth')->group(function(){
-    Route::get('/login', 'Login\LoginController@loginView')->name('loginView');
-    Route::post('/login/post', 'Login\LoginController@loginPost')->name('loginPost');
-    Route::get('/register', 'Register\RegisterController@registerView')->name('registerView');
-    Route::post('/register/post', 'Register\RegisterController@registerPost')->name('registerPost');
-    Route::get('/completion', 'Register\RegisterController@completionView')->name('completionView');
+Route::group(['middleware' => ['guest']], function(){
+    Route::namespace('Auth')->group(function(){
+        Route::namespace('Login')->group(function(){
+            Route::get('/login', 'LoginController@loginView')->name('loginView');
+            Route::post('/login/post', 'LoginController@loginPost')->name('loginPost');
+        });
+        Route::namespace('Register')->group(function(){
+            Route::get('/register', 'RegisterController@registerView')->name('registerView');
+            Route::post('/register/post', 'RegisterController@registerPost')->name('registerPost');
+            Route::get('/completion', 'RegisterController@completionView')->name('completionView');
+        });
+    });
 });
 
-Route::namespace('Admin')->group(function(){
-    Route::get('/posts', 'Post\PostsController@postsView');
-    // Route::get('/category', 'Post\Controller@View');
-    // Route::get('/create', 'Post\Controller@View');
-    // Route::get('/detail', 'Post\Controller@View');
-    // Route::get('/update', 'Post\Controller@View');
-    // Route::get('/comment', 'Post\Controller@View');
+Route::group(['middleware' => ['auth']], function(){
+    Route::namespace('Admin')->group(function(){
+        Route::namespace('Post')->group(function(){
+            Route::get('/posts', 'PostsController@postsView')->name('postsView');
+            // Route::get('/category', 'Post\Controller@View');
+            // Route::get('/create', 'Post\Controller@View');
+            // Route::get('/detail', 'Post\Controller@View');
+            // Route::get('/update', 'Post\Controller@View');
+            // Route::get('/comment', 'Post\Controller@View');
+            Route::get('/logout', 'PostsController@logout')->name('logout');
+        });
+    });
 });
+
+Route::get('/', function () {
+    return redirect('/login');
+})->name('login');
